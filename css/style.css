@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.clear-fix {
+    clear: both;
+}
+.sectionTitle h2::after{
+    content: "";
+    position: absolute;
+    border: 1px solid #FF305B;
+    width: 60px;
+    height: 8px;
+    bottom: -12%;
+    left: 46%;
+    border-left: none;
+    border-right: none;
+}
+.sectionTitle h2::before{
+    content: "";
+    position: absolute;
+    border: 1px solid #FF305B;
+    height: 2px;
+    width: 150px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    bottom: -10%;
+    right: 45%;
+}
+/*-------home----------*/
+.homeSection {
+    background-image: url(../images/header.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.homeSection .homeContent {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    overflow: hidden;
+}
+
+.homeSection .navbar {
+    margin-top: 25px;
+    /* top: 0;
+    left: 10%;
+    right: 10%;
+    position: fixed; */
+}
+
+.homeSection .navLogo {
+    float: left;
+
+}
+
+.homeSection .navLogo a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 800;
+    color: #FF305B;
+}
+
+.homeSection .navItem {
+    float: right;
+}
+
+.homeSection .navItem li {
+    float: left;
+    padding-inline: 15px;
+    list-style: none;
+}
+
+.homeSection .navItem li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s color;
+}
+
+.homeSection .navItem li a:hover {
+    color: #FF305B;
+}
+
+.homeSection .homeText {
+    margin-top: 15%;
+    color: white;
+    text-align: center;
+
+}
+
+.homeText span {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.homeText h1 {
+    color: #FF305B;
+    margin-bottom: 10px;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.homeText p {
+    font-size: 26px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/*----------------about--------------*/
+.aboutSection {
+    margin-top: 10%;
+}
+.aboutImgSec{
+    float: left;
+    width: 30%;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.aboutImg-item{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    position: relative;
+}
+.aboutImgSec img{
+    width: 100%;
+    display: block; 
+    border-radius: 4px;
+}
+.aboutSection .aboutOverImg{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    top: 100%;
+    transition: 0.5s top;
+}
+.aboutImgSec:hover .aboutOverImg{
+    top: 0;
+}
+.aboutOverImg a{
+    color: white;
+    padding: 5px;
+    position: relative;
+    top: 50%;
+    left: 30%;
+    transition: 0.3s color;
+}
+.aboutOverImg a:hover{
+    color: #FF305B;
+}
+.aboutTextSec{
+    float: right;
+    width: 60%;
+}
+.aboutTextSec h2{
+    padding-bottom: 15px;
+    position: relative;
+}
+.aboutTextSec h2::before{
+    content: "";
+    width: 4px;
+    height: 25px;
+    background-color: #FF305B;
+    position: absolute;
+    left: -2%;
+}
+.aboutTextSec p{
+    padding-bottom: 5%;
+    border-bottom: #999999 2px dotted;
+}
+.aboutSection .profileSec{
+    /* background-color: teal; */
+    margin-top: 5%;
+}
+.aboutSection .profileSec li{
+    float: left;
+    width: 50%;
+    padding-block: 10px ;
+    list-style: none;
+}
+.profileSec li .title{
+    font-weight: 600;
+    color: black;
+}
+.aboutSection .profileSec button{
+    background-color: tomato;
+    margin-top: 0px;
+    margin-top: 5%;
+    color: white;
+    background-color: #FF305B;
+    width: 25%;
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 1s all;
+}
+.aboutSection .profileSec button:hover{
+    background-color: red;
+}
+/*----------Our Services-------------*/
+.ServicesSection{
+    background-color: #F1F1F1;
+    margin-top: 10%;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+.ServicesSection h2{
+    margin-top: 10%;
+    font-size: 35px;
+    font-weight: 800;
+    position: relative;
+}
+
+.ServicesSection .servicesItem{
+    width: 25%;
+    float: left;
+    margin-top: 5%;
+    padding-top: 20px;
+    padding-bottom: 5%;
+    transition: 0.5s all;
+}
+.servicesItem:hover{
+    background-color: white;
+    box-shadow: 2px 2px 5px 2px  #888888;
+}
+.ServicesSection .servicesItem h3{
+    font-weight: 500;
+    margin-bottom: 5%;
+}
+.ServicesSection .servicesItem p{
+    line-height: 1.5;
+}
+.ServicesSection .servicesItem i{
+    color: #FF305B;
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+/*----------Our Portfolio-----------*/
+.PortfolioSection{
+    text-align: center;
+    margin-top: 5%;
+}
+.PortfolioSection h2{
+    padding-top: 5%;
+    position: relative;
+    font-size: 35px;
+    font-family: 600;
+}
+.PortfolioSection .PortfolioHeader{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.PortfolioHeader a{
+    text-decoration: none;
+}
+.PortfolioHeader span{
+    padding: 0px 15PX;
+    letter-spacing: 1px;
+}
+.PortfolioSection .PortfolioItem{
+    float: left;
+    width: 33.3333%;
+}
+.PortfolioItem .ItemContent {
+    width: 100%;
+    padding: 15px;
+}
+.pro-itm-cont{
+    width: 100%;
+    position: relative;
+}
+.PortfolioItem .ItemContent img {
+    width: 100%;
+    display: block;
+}
+.PortfolioItem .overItemImg{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    inset: 0;
+    transition: 0.5s all ;
+    opacity: 0;
+    cursor: pointer;
+}
+.PortfolioItem .overItemImg:hover{
+    opacity: 1;
+}
+.PortfolioItem .overItemImg i{
+    color: #FF305B;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 20px;
+}
+/*-----------rating section----------*/
+.rateSection{
+    background-color: #F1F1F1;
+    text-align: center;
+    margin-top: 10%;
+}
+.rateSection .rateContent{
+    padding: 10% 0;
+}
+.rateSection .rateSectionItems{
+    float: left;
+    width: 25%;
+}
+.rateSectionItems i{
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: #FF305B;
+}
+.rateSectionItems h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.rateSectionItems h5{
+    color: #494949;
+    font-size: 15px;
+}
+/*-----------Client's Feedback---------*/
+.feedbackSection{
+    margin-top: 10%;
+}
+.feedbackSection h2{
+    text-align: center;
+    margin-bottom: 5%;
+    position: relative;
+    font-size: 35px;
+    font-family: 600;
+}
+.feedbackContent{
+    background-color: #F1F1F1;
+    border: 1px  transparent;
+    border-radius: 5px;
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+.feedbackDesign{
+    float: left;
+    width: 0;
+    height: 0;
+    border-top: 100px solid #FF305B;
+    border-left: 100px solid #FF305B;
+    border-bottom: 100px solid transparent;
+    border-right: 100px solid transparent;
+    /* border-top-left-radius: 5px; */
+}
+.feedbackImg{
+    position: relative;
+    width: 80%;
+}
+.feedbackImg img{
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    left: -70px;
+    /* width: 50%;
+    z-index: 5; */      /*!!!!!!!!!!!*/
+}
+.feedbackItems{
+    float: left;
+    width: 70%;
+    padding-top: 50px;
+}
+.feedbackItems h3{
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+.feedbackItems a{
+    text-decoration: none;
+    color: #494949;
+}
+.feedbackItems a .location{
+    color: #494949;
+}
+.feedbackItems p{
+padding-top: 15px;
+font-style: italic;
+color: #494949;
+}
+.feedbackItems .stars{
+    padding: 50px 0;
+}
+.feedbackItems .stars i{
+    color: gold;
+}
+.feedbackSection .bottom{
+    margin: auto;
+    width: 10%;
+    margin-top: 15px;
+}
+.feedbackSection .bottomDES1{
+    width: 30px;
+    height: 10px;
+    border: 1px solid #FF305B ;
+    background-color: #FF305B;
+    border-radius: 10px;
+    float: left;
+    margin: 5px;
+}
+.feedbackSection .bottomDES2{
+    width: 10px;
+    height: 10px;
+    border: 1px solid #FF305B ;
+    background-color: transparent;
+    border-radius: 50%;
+    float: left;
+    margin: 5px;
+}
+/*----------Our Blog-----------------*/
+.blogSection{
+    background-color: #F1F1F1;
+    margin-top: 10%;
+}
+.blogSection h2{
+    text-align: center;
+    padding: 70px 0 ;
+    font-size: 35px;
+    position: relative;
+    font-family: 600;
+}
+.blogSection h2::after{
+    bottom: 30%;
+    left: 46%;
+}
+.blogSection h2::before{
+    bottom: 31%;
+    right: 45%;
+}
+.blogSection .blogContent{
+    padding-bottom: 60px;
+}
+.blogSection .blogItems{
+    width: 33.333%;
+    float: left;
+    padding: 10px;
+}
+.blogItems .blogInner{
+    background-color: white;
+}
+.blogSection .blogItemsImg{
+    position: relative;
+    padding-bottom: 56.25%;
+}
+.blogSection .blogItems img{
+    width: 100%;
+}
+.blogSection .blogItems iframe{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+.blogInner .itemText{
+    padding: 20px;
+}
+.blogInner .itemText span{
+    color: #494949;
+}
+.blogInner .itemText h3{
+    cursor: pointer;
+    font-size: 20px;
+    padding: 15px 0;
+    transition: 0.5s color;
+}
+.blogInner .itemText h3:hover{
+    color: #FF305B;
+}
+.blogInner .itemText p{
+    color: #494949;
+    line-height: 30px;
+    padding-bottom: 15px;
+}
+.blogInner .itemText a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: 0.5s color;
+}
+.blogInner .itemText a:hover{
+    color: #FF305B;
+}
+/*--------Contact Us-----------*/
+.contactSection{
+    margin-top: 5%;
+}
+.contactSection h2{
+    font-size: 35px;
+    text-align: center;
+    padding-top: 50px;
+    position: relative;
+    font-family: 600;
+}
+.contactSection .contactContent{
+    width: 70%;
+    margin: auto;
+    margin-top: 5%;
+}
+.contactName {
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+}
+.contactEmail{
+    width: 50%;
+    float: left;
+    padding-left: 15px; 
+}
+.contactName input ,.contactEmail input ,
+.contactMessage textarea ,.contactSub input
+{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: #a94442 1px solid;
+    font-size: 15px;
+}
+.contactSub{
+    margin-top: 30px;
+    margin: 40px 0;
+}
+.contactMessage textarea{
+    resize: both;
+}
+.contactContent button{
+    margin-top: 20px;
+    padding: 10px;
+    color: white;
+    background-color: #FF305B;
+    border-radius: 5px;
+    border: #FF305B 1px solid;
+    cursor: pointer;
+}
+/*-----------footer-----*/
+.footerSection{
+    margin-top: 10%;
+    background-color: #333333;
+}
+.footerSection .footerContent{
+    padding: 5% 0;
+    text-align: center;
+}
+.footerContent .footerIcons{
+    margin-bottom: 15px;
+}
+.footerIcons a{
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+}
+.footerContent p{
+    color: white;
+    font-size: 16px;
+}
+.footerContent p span{
+    color: #FF305B;
+}
